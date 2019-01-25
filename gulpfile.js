@@ -7,7 +7,7 @@ const browserSync = require('browser-sync');
 const uglify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
 
-function styles() {
+function lessstyles() {
 	return gulp.src('./app/less/**/*.less')
 				.pipe(gulpLess())
 				.pipe(gcmq())
@@ -16,11 +16,19 @@ function styles() {
            				cascade: false
         		}))
         		.pipe(gulp.dest('./app/css'))
-        		.pipe(cleanCSS({
-        			level: 2
-        		}))
-        		.pipe(gulp.dest('./dist/css'))
+          //       .pipe(concat('styles.css'))
+        		// .pipe(gulp.dest('./dist/css'))
         		.pipe(browserSync.stream());
+}
+
+function cssstyles() {
+    return gulp.src('./app/css/**/*.css')
+                    .pipe(concat('styles.css'))
+                    .pipe(cleanCSS({
+                        level: 2
+                    }))
+                    .pipe(gulp.dest('./dist/css'))
+                    .pipe(browserSync.stream());
 }
 
 function scripts() {
@@ -40,11 +48,13 @@ function watch() {
             baseDir: "./dist/"
         }
     });
-	gulp.watch('./app/less/**/*.less', styles);
+	gulp.watch('./app/less/**/*.less', lessstyles);
+    gulp.watch('./app/css/**/*.css', cssstyles);
 	gulp.watch('./app/js/**/*.js', scripts);
 	gulp.watch('./dist/*.html').on('change', browserSync.reload);
 }
 
-gulp.task('styles', styles);
+gulp.task('lessstyles', lessstyles);
 gulp.task('scripts', scripts);
+gulp.task('cssstyles', cssstyles);
 gulp.task('watch', watch);

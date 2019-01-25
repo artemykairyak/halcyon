@@ -1,0 +1,318 @@
+@import '_fonts.less';
+@import '_vars.less';
+
+body {
+	max-width: 1920px;
+	width: 100%;
+	margin: 0 auto;
+	font-family: @defaultfont;
+	font-weight: 400;
+	background-color: #fff;
+	font-size: 14px;
+	color: @base;
+}
+
+.wrapper {
+	width: 73%;
+	margin: 0 auto;
+	position: relative;
+}
+
+a {
+	text-decoration: none;
+}
+
+section {
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.burger {
+	position: absolute;
+	right: 0;
+	top: 65px;
+	font-size: 33px;
+	cursor: pointer;
+	line-height: 24px; 
+	transition: all 0.3s;
+
+	&:hover {
+		color: @accent;
+		transform: scale(1.1);
+	}
+}
+
+.header-composition {
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 27%;
+
+	span {
+		color: #a1a9b0;
+	}
+
+	.h1 {
+		margin-bottom: 25px;
+		letter-spacing: 12px;
+		font-size: 40px;
+	}
+
+	p {
+		color: #8c9398;
+		font-family: @defaultfont;
+		font-size: 16px;
+		font-weight: 300;
+		letter-spacing: 2.25px;
+
+		span {
+			font-weight: 500;
+			font-style: italic;
+
+		}
+	}
+}
+
+.h1, .h2, .h3 {
+	color: #353535;
+	font-family: @defaultfont;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 2.25px;
+}
+
+.h2 {
+	font-size: 15px;
+	font-weight: 500;
+	margin-bottom: 25px;
+}
+
+.h3 {
+	font-size: 15px;
+	font-weight: 500;
+	margin: 25px 0;
+	letter-spacing: 1.7px;
+}
+
+.button {
+	color: #fff;
+	background-color: @accent;
+	text-transform: uppercase;
+	padding: 25px 35px;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: 2.25px;
+	margin-top: 65px;
+	display: inline-block;
+	box-shadow: inset 0 -3px 0 darken(@accent, 15%);
+	transition: background-color 0.3s;
+
+	&:hover {
+		text-decoration: none;
+		background-color: darken(@accent, 5%);
+		color: #fff;
+	}
+}
+
+.composition {
+	padding: 110px 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.portfolio {
+	width: 100%;
+	background-color: #f3f5f8;
+	height: inherit;
+}
+
+.portfolio-composition {
+	p {
+		color: #8c9398;
+		margin-top: 70px;
+		line-height: 2.5;
+	}
+}
+
+.arr {
+	background-image: url(../img/arr.png);
+	width: 15px;
+	height: 13px; 
+	display: block;
+	margin: 0 auto;
+	position: relative;
+
+	&::before, &::after {
+		content: '';
+	    position: absolute;
+	    top: 50%;	  
+	    border-bottom: 2px dotted rgba(0, 0, 0, 0.1);
+	    width: 240px;
+	}
+
+	&::before {
+		left: 35px;
+	}
+
+	&::after {
+		right: 35px;
+	}
+}
+
+.wrapped-item {
+	color: @base;
+	letter-spacing: 0.14px;
+	font-weight: 700;
+}
+
+.services {
+	height: inherit;
+	background-color: #fff;
+}
+
+.services-composition {
+	padding-bottom: 85px;
+}
+
+.services-cards {
+	padding-bottom: 110px;
+}
+
+.service-card {
+	text-align: center;
+	i {
+		color: #fff;
+		font-size: 60px;
+		background-color: @accent;
+		padding: 50px;
+		border-radius: 100%;	
+		position: relative;
+		overflow: hidden;
+	}
+
+	.card-icon {
+  		overflow: hidden;
+  		text-shadow: 
+		rgba(50, 181, 160, 1) 1px 1px,
+		rgba(50, 181, 160, 1) 2px 2px,
+		rgba(50, 181, 160, 1) 3px 3px,
+		rgba(50, 181, 160, 1) 3px 3px,
+		rgba(50, 181, 160, 1) 4px 4px,
+		rgba(50, 181, 160, 1) 5px 5px,
+		rgba(50, 181, 160, 1) 6px 6px,
+		rgba(50, 181, 160, 1) 7px 7px,
+		rgba(50, 181, 160, 1) 8px 8px,
+		rgba(50, 181, 160, 1) 9px 9px,
+		rgba(50, 181, 160, 1) 10px 10px,
+		rgba(50, 181, 160, 1) 11px 11px,
+		rgba(50, 181, 160, 1) 12px 12px,
+		rgba(50, 181, 160, 1) 13px 13px,
+		rgba(50, 181, 160, 1) 14px 14px,
+		rgba(50, 181, 160, 1) 15px 15px,
+		rgba(50, 181, 160, 1) 16px 16px,
+		rgba(50, 181, 160, 1) 17px 17px,
+		rgba(50, 181, 160, 1) 18px 18px,
+		rgba(50, 181, 160, 1) 19px 19px,
+		rgba(50, 181, 160, 1) 20px 20px,
+		rgba(50, 181, 160, 1) 21px 21px,
+		rgba(50, 181, 160, 1) 22px 22px,
+		rgba(50, 181, 160, 1) 23px 23px,
+		rgba(50, 181, 160, 1) 24px 24px,
+		rgba(50, 181, 160, 1) 25px 25px,
+		rgba(50, 181, 160, 1) 26px 26px,
+		rgba(50, 181, 160, 1) 27px 27px,
+		rgba(50, 181, 160, 1) 28px 28px,
+		rgba(50, 181, 160, 1) 29px 29px,
+		rgba(50, 181, 160, 1) 30px 30px,
+		rgba(50, 181, 160, 1) 31px 31px,
+		rgba(50, 181, 160, 1) 32px 32px,
+		rgba(50, 181, 160, 1) 33px 33px,
+		rgba(50, 181, 160, 1) 34px 34px,
+		rgba(50, 181, 160, 1) 35px 35px,
+		rgba(50, 181, 160, 1) 36px 36px,
+		rgba(50, 181, 160, 1) 37px 37px,
+		rgba(50, 181, 160, 1) 38px 38px,
+		rgba(50, 181, 160, 1) 39px 39px,
+		rgba(50, 181, 160, 1) 40px 40px,
+		rgba(50, 181, 160, 1) 41px 41px,
+		rgba(50, 181, 160, 1) 42px 42px,
+		rgba(50, 181, 160, 1) 43px 43px,
+		rgba(50, 181, 160, 1) 44px 44px,
+		rgba(50, 181, 160, 1) 45px 45px,
+		rgba(50, 181, 160, 1) 46px 46px,
+		rgba(50, 181, 160, 1) 47px 47px,
+		rgba(50, 181, 160, 1) 48px 48px,
+		rgba(50, 181, 160, 1) 49px 49px,
+		rgba(50, 181, 160, 1) 50px 50px,
+		rgba(50, 181, 160, 1) 51px 51px,
+		rgba(50, 181, 160, 1) 52px 52px,
+		rgba(50, 181, 160, 1) 53px 53px,
+		rgba(50, 181, 160, 1) 54px 54px,
+		rgba(50, 181, 160, 1) 55px 55px,
+		rgba(50, 181, 160, 1) 56px 56px,
+		rgba(50, 181, 160, 1) 57px 57px,
+		rgba(50, 181, 160, 1) 58px 58px,
+		rgba(50, 181, 160, 1) 59px 59px,
+		rgba(50, 181, 160, 1) 60px 60px,
+		rgba(50, 181, 160, 1) 61px 61px,
+		rgba(50, 181, 160, 1) 62px 62px,
+		rgba(50, 181, 160, 1) 63px 63px,
+		rgba(50, 181, 160, 1) 64px 64px,
+		rgba(50, 181, 160, 1) 65px 65px,
+		rgba(50, 181, 160, 1) 66px 66px,
+		rgba(50, 181, 160, 1) 67px 67px,
+		rgba(50, 181, 160, 1) 68px 68px,
+		rgba(50, 181, 160, 1) 69px 69px,
+		rgba(50, 181, 160, 1) 70px 70px,
+		rgba(50, 181, 160, 1) 71px 71px,
+		rgba(50, 181, 160, 1) 72px 72px,
+		rgba(50, 181, 160, 1) 73px 73px,
+		rgba(50, 181, 160, 1) 74px 74px,
+		rgba(50, 181, 160, 1) 75px 75px,
+		rgba(50, 181, 160, 1) 76px 76px,
+		rgba(50, 181, 160, 1) 77px 77px,
+		rgba(50, 181, 160, 1) 78px 78px,
+		rgba(50, 181, 160, 1) 79px 79px,
+		rgba(50, 181, 160, 1) 80px 80px,
+		rgba(50, 181, 160, 1) 81px 81px,
+		rgba(50, 181, 160, 1) 82px 82px,
+		rgba(50, 181, 160, 1) 83px 83px,
+		rgba(50, 181, 160, 1) 84px 84px,
+		rgba(50, 181, 160, 1) 85px 85px,
+		rgba(50, 181, 160, 1) 86px 86px,
+		rgba(50, 181, 160, 1) 87px 87px,
+		rgba(50, 181, 160, 1) 88px 88px,
+		rgba(50, 181, 160, 1) 89px 89px,
+		rgba(50, 181, 160, 1) 90px 90px,
+		rgba(50, 181, 160, 1) 91px 91px,
+		rgba(50, 181, 160, 1) 92px 92px,
+		rgba(50, 181, 160, 1) 93px 93px,
+		rgba(50, 181, 160, 1) 94px 94px,
+		rgba(50, 181, 160, 1) 95px 95px,
+		rgba(50, 181, 160, 1) 96px 96px,
+		rgba(50, 181, 160, 1) 97px 97px,
+		rgba(50, 181, 160, 1) 98px 98px,
+		rgba(50, 181, 160, 1) 99px 99px,
+  	    rgba(50, 181, 160, 1) 100px 100px;
+	}
+
+	.h3::after {
+		content: '';
+		width: 33px;
+		height: 3px;
+		background-color: @accent;
+		color: @accent;
+		display: block;
+		margin: 25px auto;
+	}
+
+	p {
+		color: #8c9398;
+		line-height: 1.7;
+	}
+}
+
