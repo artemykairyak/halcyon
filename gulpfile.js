@@ -33,7 +33,8 @@ function cssstyles() {
 
 function scripts() {
 	return gulp.src([
-                'app/libs/jquery-3.3.1.min.js',               
+                'app/libs/jquery-3.3.1.min.js', 
+                'app/libs/slick.min.js',              
                 'app/js/script.js'
                     ])
                 .pipe(concat('libs.min.js'))
