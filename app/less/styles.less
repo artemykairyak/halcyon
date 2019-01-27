@@ -82,7 +82,7 @@ section {
 
 	p {
 		color: #fff;
-		font-size: 28px;
+		font-size: 18px;
 		margin-top: 67px;
 		letter-spacing: 10px;
 
@@ -92,7 +92,8 @@ section {
 	}
 
 	ul {
-		margin-top: 100px;
+		margin-top: 15%;
+
 		li, a{
 			display: block;
 			color: #fff;
@@ -202,7 +203,7 @@ section {
 }
 
 .composition {
-	padding: 110px 0;
+	padding: 8% 0;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -398,20 +399,15 @@ section {
   	    rgba(50, 181, 160, 1) 100px 100px;
 	}
 
-	.h3::after {
-		content: '';
-		width: 33px;
-		height: 3px;
-		background-color: @accent;
-		color: @accent;
-		display: block;
-		margin: 25px auto;
+	h3.title {
+		margin: 25px 0;
 	}
+}
 
-	p {
-		color: #8c9398;
-		line-height: 1.7;
-	}
+.text {
+	text-align: center;
+	color: #8c9398;
+	line-height: 1.7;
 }
 
 .design {
@@ -478,6 +474,11 @@ section {
 		border-radius: 100%;
 		width: 10px;
 		height: 10px;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.1);
+		}
 
 	}
 }
@@ -490,6 +491,11 @@ section {
 	top: 2px;
 	left: 2px;
 	border-radius: 100%;
+}
+
+.slick-slide {
+	user-select: text;
+	outline: none;
 }
 
 .slick-dots li.slick-active button:before {
@@ -561,6 +567,24 @@ i.fa-angle-down {
 	}
 }
 
+.title {
+	font-size: 15px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 2.25px;
+	margin-top: 45px;
+
+	&::after {
+		content: '';
+		width: 33px;
+		height: 3px;
+		background-color: @accent;
+		color: @accent;
+		display: block;
+		margin: 25px auto;
+	}
+}
+
 .project {
 	&-card {
 		text-align: center;
@@ -575,11 +599,6 @@ i.fa-angle-down {
 		}
 
 		&-title {
-			font-size: 15px;
-			font-weight: 500;
-			text-transform: uppercase;
-			letter-spacing: 2.25px;
-			margin-top: 45px;
 
 			&::after {
 				content: '';
@@ -590,11 +609,6 @@ i.fa-angle-down {
 				display: block;
 				margin: 20px auto 30px;
 			}
-		}
-
-		&-text {
-			color: #8c9398;
-			line-height: 1.7;
 		}
 	}
 
@@ -609,7 +623,6 @@ i.fa-angle-down {
 
 .mask, .hover-content {
 	position: absolute;
-	
 }
 
 .mask {
@@ -645,6 +658,7 @@ i.fa-angle-down {
 
 .hover-project {
 	cursor: pointer;
+
 	.mask {
 		display: initial;
 	}
@@ -652,7 +666,177 @@ i.fa-angle-down {
 	.hover-content {
 		display: initial;
 	}
-
 }
 
+.ignite {
+	height: auto;
+	background-color: #242830;
+	text-align: center;
 
+	a {
+		border: 1px solid #fff;
+		margin: 64px auto;
+		padding: 0 40px;
+		height: 70px;
+		font-size: 15px;
+		letter-spacing: 2.25px;
+		text-align: center;
+		color: #fff;
+		text-transform: uppercase;
+		line-height: 70px;
+		display: inline-block;
+		transition: all 0.3s ease;
+
+		&:hover {
+			border-color: @accent;
+			box-shadow: 0 0 1px 1px @accent;
+		}
+	}
+}
+
+.team {
+	background-color: #fff;
+	height: auto;
+
+	&-composition {
+		padding-bottom: 6%;
+	}
+
+	&-members {
+		text-align: center;
+	}
+
+	&-photo {
+		width: 200px;
+		height: 200px;
+		margin: 2px auto;
+		position: relative;
+
+		img {
+			width: 100%;
+			height: auto;
+		}		
+	}
+
+	&-name {
+		margin-top: 50px;
+	}
+
+	ul.slick-dots {
+		margin: 5% auto 5%;
+	}
+
+	&-mask {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		display: block;
+		background-image: url(../img/1.png);
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	&-socials {
+		margin-top: 38px;
+
+		i {
+			margin-right: 10px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.socials {
+	i {
+		width: 40px;
+		height: 40px;
+		background-color: #242830;
+		border-radius: 100%;
+		color: #fff;
+		line-height: 40px;
+		text-align: center;
+		transition: all 0.3s ease;
+		cursor: pointer;
+
+		&:hover {
+			background-color: @accent;
+		} 
+	}
+}
+
+.subscribe {
+	height: auto;
+	background-color: @base;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	&-composition {
+		text-align: center;
+		color: #fff;
+		margin: 7% 0;
+	}
+
+	i {
+		font-size: 25px;
+	}
+
+	.title {
+		margin: 25px auto 45px;
+
+		&::after {
+			display: none;
+		}
+	}
+
+	input {
+		height: 65px;
+		line-height: 65px;
+		transition: all 0.3s ease;
+		outline: none;
+	}
+
+	input[name='email'] {
+		width: 350px;
+		background-color: transparent;
+		border: 1px solid #fff;
+		color: #fff;
+		font-size: 18px;
+		text-transform: uppercase;
+		letter-spacing: 2.25px;
+		padding-left: 20px;
+		box-sizing: border-box;
+
+		&:hover {
+			border-color: @accent; 
+		}
+
+		&:focus {
+			box-shadow: 0 0 1px 1px @accent;
+			border-color: @accent; 
+		}
+	}
+
+	input[name='send-btn'] {
+		width: 97px;
+		text-transform: uppercase;
+		font-size: 15px;
+		font-weight: 500;
+		letter-spacing: 2.25px;
+		color: #fff;
+		background-color: @accent;
+		border: none;
+		margin-left: 5px;
+		cursor: pointer;
+
+		&:hover {
+			transform: translateY(-2px);
+		}
+	}
+}

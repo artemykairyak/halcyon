@@ -13,7 +13,8 @@ $(function() {
   		slidesToShow: 1,
   		slidesToScroll: 1,
   		dots: true,
-  		arrows: false
+  		arrows: false,
+  		draggable: false
 	});
 
 	$('.projects-slider').slick({
@@ -21,7 +22,17 @@ $(function() {
   		slidesToShow: 3,
   		slidesToScroll: 3,
   		dots: true,
-  		arrows: false
+  		arrows: false,
+  		draggable: false
+	});
+
+	$('.team-members').slick({
+		infinite: false,
+  		slidesToShow: 3,
+  		slidesToScroll: 3,
+  		dots: true,
+  		arrows: false,
+  		draggable: false
 	});
 
 	$('.project-card').on('mouseenter', function(e) {
@@ -50,5 +61,17 @@ $(function() {
 		$('.menu').removeClass('menu-active');
 		$('.burger').removeClass('burger-active');
 		$('.overlay').css({'display': 'none', 'opacity': '0'});
+	})
+
+	$('.learn-more-btn').on('click', function(e) {
+		$('html, body').animate({
+        scrollTop: $('.portfolio').offset().top
+     }, 500);
+	})
+
+	$('.fa-angle-down').on('click', function(e) {
+		$('html, body').animate({
+        scrollTop: $('.projects').offset().top
+     }, 500);
 	})
 })
