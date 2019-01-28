@@ -47,7 +47,8 @@
   font-style: bold;
 }
 
-body {
+body,
+html {
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
@@ -79,7 +80,6 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  overflow-x: hidden;
 }
 
 .burger {
@@ -132,8 +132,9 @@ section {
 .menu p {
   color: #fff;
   font-size: 18px;
-  margin-top: 67px;
+  margin-top: 7vh;
   letter-spacing: 10px;
+  text-align: center;
 }
 
 .menu p span {
@@ -141,15 +142,14 @@ section {
 }
 
 .menu ul {
-  margin-top: 15%;
+  margin: 10% 0;
 }
 
-.menu ul li,
 .menu ul a {
   display: block;
   color: #fff;
   list-style-type: none;
-  padding: 15px 0px;
+  padding: 5% 0px;
   opacity: 1;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -269,7 +269,7 @@ section {
 
 .portfolio-composition p {
   color: #8c9398;
-  margin-top: 70px;
+  margin-top: 8%;
   line-height: 2.5;
 }
 
@@ -335,12 +335,8 @@ section {
   background-color: #fff;
 }
 
-.services-composition {
-  padding-bottom: 85px;
-}
-
 .services-cards {
-  padding-bottom: 110px;
+  padding-bottom: 8%;
 }
 
 .service-card {
@@ -398,11 +394,12 @@ section {
 .right-half {
   z-index: 2;
   text-align: center;
-  padding-left: 100px;
+  padding-left: 10%;
+  padding-right: 0;
 }
 
 .right-half .slick-dots {
-  margin-bottom: 130px;
+  padding-bottom: 24%;
 }
 
 .design-composition {
@@ -412,7 +409,7 @@ section {
 
 .design-composition .arr::before,
 .design-composition .arr::after {
-  width: 200px;
+  width: 150px;
 }
 
 .design-composition p {
@@ -478,7 +475,8 @@ section {
   text-align: center;
   text-transform: uppercase;
   color: #fff;
-  padding: 80px 0;
+  padding: 8% 0;
+  margin: 0 auto;
 }
 
 .counter-text-high {
@@ -491,6 +489,10 @@ section {
   letter-spacing: 7.5px;
   font-size: 25px;
   margin-top: 30px;
+}
+
+.counter .green-arr {
+  margin-top: 5%;
 }
 
 .counter-wrapped-text {
@@ -521,10 +523,6 @@ section {
   box-shadow: 0 0 1px 1px #3dc9b3;
 }
 
-i.fa-angle-down {
-  margin-top: 45px;
-}
-
 .projects {
   width: 100%;
   height: auto;
@@ -532,11 +530,11 @@ i.fa-angle-down {
 }
 
 .projects-slider .slick-list {
-  margin-bottom: 75px;
+  margin-bottom: 7%;
 }
 
 .projects .container {
-  padding: 105px 0;
+  padding: 7% 0;
 }
 
 .title {
@@ -578,10 +576,6 @@ i.fa-angle-down {
   color: #3dc9b3;
   display: block;
   margin: 20px auto 30px;
-}
-
-.project ul.slick-dots {
-  margin-top: 75px;
 }
 
 .slick-dotted.slick-slider {
@@ -823,6 +817,7 @@ i.fa-angle-down {
   border: none;
   margin-left: 5px;
   cursor: pointer;
+  text-align: center;
 }
 
 .subscribe input[name='send-btn']:hover {
@@ -936,10 +931,6 @@ i.fa-angle-down {
   color: #3dc9b3;
 }
 
-.left-menu {
-  float: left;
-}
-
 .left-menu li {
   display: inline-block;
   margin-left: 4px;
@@ -963,4 +954,262 @@ i.fa-angle-down {
 
 .right-menu a.company {
   font-style: italic;
+}
+
+@media (max-width: 1200px) {
+  .menu {
+    right: -30vw;
+    width: 30vw;
+  }
+
+  .menu-active {
+    right: 0;
+  }
+
+  .burger-active {
+    right: 32vw;
+    color: #fff;
+  }
+
+  .right-half {
+    padding-left: 18%;
+  }
+
+  .design-composition p {
+    text-align: justify;
+  }
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    width: 80%;
+  }
+
+  .service-card {
+    margin-bottom: 30px;
+  }
+
+  .service-card i {
+    padding: 40px;
+  }
+
+  .design .wrapper {
+    background-position: 0% 20%;
+  }
+
+  .contact .row > div {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 850px) {
+  .left-menu,
+  .right-menu {
+    float: none;
+    display: block;
+    text-align: center;
+    padding: 3%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 85%;
+  }
+
+  .menu {
+    right: -100vw;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .menu p {
+    font-size: 26px;
+    margin-top: 85px;
+  }
+
+  .menu ul {
+    margin: 5% 0;
+  }
+
+  .menu ul a {
+    padding: 3% 0;
+  }
+
+  .menu-active {
+    right: 0;
+  }
+
+  .burger {
+    top: 40px;
+    right: 10vw;
+  }
+
+  .burger-active {
+    right: 10vw;
+    color: #fff;
+    z-index: 1000;
+  }
+
+  .header-composition {
+    margin: 50% auto 0;
+  }
+
+  .header-composition .h1 {
+    font-size: 24px;
+  }
+
+  .header-composition p {
+    color: #353535;
+    line-height: 1.7;
+  }
+
+  .service-card i {
+    padding: 30px;
+    font-size: 40px;
+  }
+
+  .design .wrapper {
+    background-position: 0 60%;
+  }
+
+  .design::after {
+    display: none;
+  }
+
+  .design ul.slick-dots {
+    background-color: #fff;
+    padding: 0;
+    margin-bottom: 20%;
+    padding-bottom: 30px;
+  }
+
+  .right-half {
+    padding: 0;
+  }
+
+  .design-composition {
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 6%;
+    opacity: 0.9;
+  }
+
+  .design-composition .arr::before,
+  .design-composition .arr::after {
+    width: 100px;
+  }
+
+  .design-composition p {
+    color: #353535;
+  }
+
+  .counter-text-high {
+    font-size: 32px;
+  }
+
+  .counter-text-bottom {
+    font-size: 20px;
+  }
+
+  .subscribe-composition {
+    padding-bottom: 12%;
+  }
+
+  .subscribe input {
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .subscribe input[name='email'] {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .subscribe input[name='send-btn'] {
+    display: inline-block;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper {
+    width: 95%;
+  }
+
+  .header {
+    background-position: 0% 0%;
+  }
+
+  .design-composition {
+    margin-top: 0;
+    opacity: 1;
+    background-color: #f3f5f8;
+  }
+
+  .design-composition p {
+    color: #8c9398;
+  }
+
+  .design ul.slick-dots {
+    background-color: #f3f5f8;
+    margin-bottom: 0;
+  }
+
+  .counter-text-high {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  .counter-text-bottom {
+    font-size: 14px;
+  }
+
+  .team ul.slick-dots {
+    margin: 8% auto;
+  }
+
+  .contact-composition {
+    padding-top: 13%;
+  }
+
+  .contact-card {
+    padding: 20px 0;
+    margin: 5px auto;
+  }
+
+  .footer {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .arr::before,
+  .arr::after {
+    width: 130px;
+  }
+}
+
+@media (max-width: 340px) {
+  .menu p {
+    font-size: 20px;
+  }
+
+  .header-composition .h1 {
+    font-size: 20px;
+  }
+
+  .button {
+    padding: 20px 30px;
+  }
+
+  .card-icon i {
+    padding: 20px;
+    font-size: 24px;
+  }
+
+  .ignite a {
+    padding: 0 20px;
+    font-size: 14px;
+    margin: 50px auto;
+  }
 }

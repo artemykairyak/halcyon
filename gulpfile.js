@@ -8,7 +8,7 @@ const uglify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
 
 function lessstyles() {
-	return gulp.src('./app/less/**/*.less')
+	return gulp.src(['./app/less/**/*.less'])
 				.pipe(gulpLess())
 				.pipe(gcmq())
 				.pipe(autoprefixer({
@@ -16,8 +16,6 @@ function lessstyles() {
            				cascade: false
         		}))
         		.pipe(gulp.dest('./app/css'))
-          //       .pipe(concat('styles.css'))
-        		// .pipe(gulp.dest('./dist/css'))
         		.pipe(browserSync.stream());
 }
 

@@ -23,7 +23,23 @@ $(function() {
   		slidesToScroll: 3,
   		dots: true,
   		arrows: false,
-  		draggable: false
+  		draggable: false,
+  		responsive: [
+    	{
+	      	breakpoint: 992,
+	      	settings: {
+	        	slidesToShow: 2,
+	        	slidesToScroll: 2
+	    	}
+      	},
+      	{
+	      	breakpoint: 768,
+	      	settings: {
+	        	slidesToShow: 1,
+	        	slidesToScroll: 1,
+	        	draggable: true
+	    	}
+      	}]
 	});
 
 	$('.team-members').slick({
@@ -33,6 +49,22 @@ $(function() {
   		dots: true,
   		arrows: false,
   		draggable: false,
+  		responsive: [
+    	{
+	      	breakpoint: 992,
+	      	settings: {
+	        	slidesToShow: 2,
+	        	slidesToScroll: 2
+	    	}
+      	},
+      	{
+	      	breakpoint: 768,
+	      	settings: {
+	        	slidesToShow: 1,
+	        	slidesToScroll: 1,
+	        	draggable: true
+	    	}
+      	}]
 	});
 
 	$('.project-card').on('mouseenter', function(e) {
@@ -50,7 +82,6 @@ $(function() {
 		$('.menu').toggleClass('menu-active');
 		$('.burger').toggleClass('burger-active');
 		if ($(this).hasClass('burger-active')) {
-			console.log($(this));
 			$('.overlay').css('display', 'block').animate({opacity: '0.7'}, 400);
 		} else {
 			$('.overlay').css({'display': 'none', 'opacity': '0'});

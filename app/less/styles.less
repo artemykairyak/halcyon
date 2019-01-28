@@ -1,7 +1,8 @@
 @import '_fonts.less';
 @import '_vars.less';
+@import 'media.less';
 
-body {
+body, html {
 	max-width: 1920px;
 	width: 100%;
 	margin: 0 auto;
@@ -10,14 +11,13 @@ body {
 	background-color: #fff;
 	font-size: 14px;
 	color: @base;
-	overflow-x:hidden;
+	overflow-x: hidden;
 }
 
 .wrapper {
 	width: 73%;
 	margin: 0 auto;
 	position: relative;
-
 }
 
 a {
@@ -34,7 +34,6 @@ section {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	overflow-x: hidden;
 }
 
 .burger {
@@ -83,8 +82,9 @@ section {
 	p {
 		color: #fff;
 		font-size: 18px;
-		margin-top: 67px;
+		margin-top: 7vh;
 		letter-spacing: 10px;
+		text-align: center;
 
 		span {
 			color: #a1a9b0;
@@ -92,13 +92,13 @@ section {
 	}
 
 	ul {
-		margin-top: 15%;
+		margin: 10% 0;
 
-		li, a{
+		 a {
 			display: block;
 			color: #fff;
 			list-style-type: none;
-			padding: 15px 0px;
+			padding: 5% 0px;
 			opacity: 1;
 			transition: all 0.3s ease;
 		}
@@ -217,7 +217,7 @@ section {
 .portfolio-composition {
 	p {
 		color: @text;
-		margin-top: 70px;
+		margin-top: 8%;
 		line-height: 2.5;
 	}
 }
@@ -273,12 +273,8 @@ section {
 	background-color: #fff;
 }
 
-.services-composition {
-	padding-bottom: 85px;
-}
-
 .services-cards {
-	padding-bottom: 110px;
+	padding-bottom: 8%;
 }
 
 .service-card {
@@ -436,10 +432,11 @@ section {
 .right-half {
 	z-index: 2;
 	text-align: center;
-	padding-left: 100px; 
+	padding-left: 10%; 
+	padding-right: 0;
 
 	.slick-dots {
-		margin-bottom: 130px;
+		padding-bottom: 24%;
 	}
 }
 
@@ -448,7 +445,7 @@ section {
 	
 	.arr {
 		&::before, &::after {
-			width: 200px;
+			width: 150px;
 		}
 	}
 	
@@ -511,7 +508,8 @@ section {
 		text-align: center;
 		text-transform: uppercase;
 		color: #fff;
-		padding: 80px 0;
+		padding: 8% 0;
+		margin: 0 auto; 
 	}
 
 	&-text-high {
@@ -525,12 +523,17 @@ section {
 		font-size: 25px;
 		margin-top: 30px;
 	}	
+
+	.green-arr {
+		margin-top: 5%;
+	}
 }
 
 .counter-wrapped-text {
 	font-weight: 500;
 	font-style: italic;
 }
+
 .green-arr {
 	width: 44px;
 	height: 44px;
@@ -551,10 +554,6 @@ section {
 	}
 }
 
-i.fa-angle-down {
-	margin-top: 45px;	
-}
-
 .projects {
 	width: 100%;
 	height: auto;
@@ -562,12 +561,12 @@ i.fa-angle-down {
 
 	&-slider {
 		.slick-list {
-			margin-bottom: 75px;
+			margin-bottom: 7%;
 		}
 	}
 	
 	.container {
-		padding: 105px 0;
+		padding: 7% 0;
 	}
 }
 
@@ -590,6 +589,7 @@ i.fa-angle-down {
 }
 
 .project {
+
 	&-card {
 		text-align: center;
 
@@ -614,10 +614,6 @@ i.fa-angle-down {
 				margin: 20px auto 30px;
 			}
 		}
-	}
-
-	ul.slick-dots {
-		margin-top: 75px;
 	}
 }
 
@@ -854,6 +850,7 @@ i.fa-angle-down {
 		border: none;
 		margin-left: 5px;
 		cursor: pointer;
+		text-align: center;
 
 		&:hover {
 			transform: translateY(-2px);
@@ -961,7 +958,6 @@ i.fa-angle-down {
 }
 
 .left-menu {
-	float: left;
 
 	li {
 		display: inline-block;
@@ -970,7 +966,7 @@ i.fa-angle-down {
 		&:last-child {
 
 			&::after {
-				display: none;
+				display: none; 
 			}
 		}
 
