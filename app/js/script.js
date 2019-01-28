@@ -32,7 +32,7 @@ $(function() {
   		slidesToScroll: 3,
   		dots: true,
   		arrows: false,
-  		draggable: false
+  		draggable: false,
 	});
 
 	$('.project-card').on('mouseenter', function(e) {
@@ -69,9 +69,23 @@ $(function() {
      }, 500);
 	})
 
-	$('.fa-angle-down').on('click', function(e) {
+	$('.counter .fa-angle-down').on('click', function(e) {
 		$('html, body').animate({
         scrollTop: $('.projects').offset().top
      }, 500);
+	})
+
+	$('.team .team-card').hover(function(e) {
+		$(this).toggleClass('team-card-hover');
+	})
+
+	$('.subscribe .fa-angle-up').on('click', function(e) {
+		$('html, body').animate({
+        scrollTop: $('.header').offset().top
+     }, 700);
+	})
+
+	$('.contact-card').hover(function(e) {
+		$(this).toggleClass('contact-card-hover');
 	})
 })

@@ -7,6 +7,13 @@
 
 @font-face {
   font-family: Gotham Rounded;
+  src: url('../fonts/GothamRounded-LightITalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Gotham Rounded;
   src: url('../fonts/GothamRounded-Book.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
@@ -491,7 +498,7 @@ section {
   font-style: italic;
 }
 
-i.fa-angle-down {
+.green-arr {
   width: 44px;
   height: 44px;
   color: #fff;
@@ -500,17 +507,22 @@ i.fa-angle-down {
   text-align: center;
   border-radius: 100%;
   font-size: 20px;
-  margin-top: 45px;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  opacity: 0.8;
 }
 
-i.fa-angle-down:hover {
+.green-arr:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-  -webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  -webkit-box-shadow: 0 0 1px 1px #3dc9b3;
+  box-shadow: 0 0 1px 1px #3dc9b3;
+}
+
+i.fa-angle-down {
+  margin-top: 45px;
 }
 
 .projects {
@@ -676,6 +688,14 @@ i.fa-angle-down:hover {
 .team-photo img {
   width: 100%;
   height: auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.team-photo .hover-mask {
+  width: 100%;
+  background-color: #3dc9b3;
+  height: 100%;
 }
 
 .team-name {
@@ -693,7 +713,7 @@ i.fa-angle-down:hover {
   bottom: 0;
   right: 0;
   display: block;
-  background-image: url(../img/1.png);
+  background-image: url(../img/team-mask.png);
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -709,6 +729,11 @@ i.fa-angle-down:hover {
 
 .team-socials i:last-child {
   margin-right: 0;
+}
+
+.team-card-hover img {
+  opacity: 0.4;
+  background-color: #3dc9b3;
 }
 
 .socials i {
@@ -734,12 +759,14 @@ i.fa-angle-down:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
+  overflow: visible;
 }
 
 .subscribe-composition {
   text-align: center;
   color: #fff;
-  margin: 7% 0;
+  padding: 7% 0;
 }
 
 .subscribe i {
@@ -801,4 +828,139 @@ i.fa-angle-down:hover {
 .subscribe input[name='send-btn']:hover {
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
+}
+
+.subscribe .green-arr {
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.subscribe .green-arr:hover {
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.contact {
+  height: auto;
+  background-color: #f3f5f8;
+}
+
+.contact-card > * {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.contact-card {
+  text-align: center;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 30px 0;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  -webkit-box-shadow: 0 0 0 1px rgba(36, 40, 48, 0.1);
+  box-shadow: 0 0 0 1px rgba(36, 40, 48, 0.1);
+}
+
+.contact-card i {
+  color: #242830;
+  font-size: 25px;
+}
+
+.contact-title {
+  color: #3dc9b3;
+  letter-spacing: 2.1px;
+  margin: 20px auto 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.contact-desc {
+  color: #8c9398;
+}
+
+.contact .socials {
+  margin: 8% auto;
+}
+
+.contact .socials i {
+  margin-right: 20px;
+}
+
+.contact .socials i:last-child {
+  margin-right: 0;
+}
+
+.contact-card-hover i {
+  color: #3dc9b3;
+}
+
+.contact-card-hover .contact-title {
+  color: #242830;
+}
+
+.contact-card-hover .contact-desc {
+  color: #242830;
+}
+
+.footer {
+  height: auto;
+  background-color: #242830;
+}
+
+.left-menu,
+.right-menu {
+  display: inline-block;
+  padding: 4% 0;
+  font-weight: 300;
+}
+
+.left-menu a,
+.right-menu a {
+  color: #a1a9b0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.left-menu a:hover,
+.right-menu a:hover {
+  color: #3dc9b3;
+}
+
+.left-menu {
+  float: left;
+}
+
+.left-menu li {
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.left-menu li:last-child::after {
+  display: none;
+}
+
+.left-menu li::after {
+  content: "|";
+  margin-left: 9px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.right-menu {
+  float: right;
+  color: #fff;
+}
+
+.right-menu a.company {
+  font-style: italic;
 }
