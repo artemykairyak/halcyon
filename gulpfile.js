@@ -45,7 +45,8 @@ function watch() {
 	browserSync.init({
         server: {
             baseDir: "./dist/"
-        }
+        },
+        tunnel: true
     });
 	gulp.watch('./app/less/**/*.less', lessstyles);
     gulp.watch('./app/css/**/*.css', cssstyles);

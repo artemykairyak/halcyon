@@ -119,4 +119,58 @@ $(function() {
 	$('.contact-card').hover(function(e) {
 		$(this).toggleClass('contact-card-hover');
 	})
+
+	$('.ignite a').click(function(e) {
+		e.preventDefault();
+	})
+
+	$('input[name=send-btn]').on('click', ValidationEmail);
+
+	function ValidationEmail() {
+		var email = $('input[name=email]').val().trim();
+		if(email.length < 3 || !email.includes('@') 
+      	|| !email.includes('.')) {
+      		errorEmailSend();				
+    	} else {
+       		subscribeAJAX();
+    	}	
+	}
+
+	function errorEmailSend() {
+		$('input[name="send-btn"]').addClass('error-email-button')
+      							.delay(2000).queue(function() {
+							 	$('input[name="send-btn"]').removeClass('error-email-button');
+							 	$(this).dequeue();
+							 });		
+								 
+      		$('input[name="email"]').addClass('error-email-text')
+  								.delay(2000).queue(function() {
+							 	$('input[name="email"]').removeClass('error-email-text');
+							 	$(this).dequeue();
+							 });		
+	}
+
+	function subscribeAJAX() {
+		$.post(
+			'server.php',
+			{
+				email: $('input[name=email]').val().trim()
+			},
+			successEmailSend);
+	}
+
+	function successEmailSend() {
+		$('input[name="send-btn"]').addClass('success-email-button')
+      							.delay(2000).queue(function() {
+							 	$(this).removeClass('success-email-button');
+							 	$(this).dequeue();
+							 });		
+								 
+      	$('input[name="email"]').addClass('success-email-text')
+  								.delay(2000).queue(function() {
+							 	$(this).removeClass('success-email-text');
+							 	$(this).val('');
+							 	$(this).dequeue();
+							 });		
+	}
 })

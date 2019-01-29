@@ -92,14 +92,20 @@ section {
 	}
 
 	ul {
-		margin: 10% 0;
+		margin: 20% 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 70vh;
+
+		li {
+			display: block;
+			list-style-type: none;
+		}
 
 		 a {
 			display: block;
 			color: #fff;
-			list-style-type: none;
-			padding: 5% 0px;
-			opacity: 1;
 			transition: all 0.3s ease;
 		}
 	}
@@ -115,8 +121,10 @@ section {
 		opacity: 0.9;
 	}
 
-	a:hover {
-		color: @accent;
+	li:hover {
+		a {
+			color: @accent;
+		}
 	}
 }
 
@@ -818,45 +826,6 @@ section {
 		outline: none;
 	}
 
-	input[name='email'] {
-		width: 350px;
-		background-color: transparent;
-		border: 1px solid #fff;
-		color: #fff;
-		font-size: 18px;
-		text-transform: uppercase;
-		letter-spacing: 2.25px;
-		padding-left: 20px;
-		box-sizing: border-box;
-
-		&:hover {
-			border-color: @accent; 
-		}
-
-		&:focus {
-			box-shadow: 0 0 1px 1px @accent;
-			border-color: @accent; 
-		}
-	}
-
-	input[name='send-btn'] {
-		width: 97px;
-		text-transform: uppercase;
-		font-size: 15px;
-		font-weight: 500;
-		letter-spacing: 2.25px;
-		color: #fff;
-		background-color: @accent;
-		border: none;
-		margin-left: 5px;
-		cursor: pointer;
-		text-align: center;
-
-		&:hover {
-			transform: translateY(-2px);
-		}
-	}
-
 	.green-arr {
 		position: absolute;
 		bottom: -22px;
@@ -867,6 +836,65 @@ section {
 		&:hover {
 			transform: translateX(-50%);
 		}
+	}
+}
+
+input[name='email'] {
+	width: 350px;
+	background-color: transparent;
+	border: 1px solid #fff;
+	color: #fff;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 2.25px;
+	padding-left: 20px;
+	box-sizing: border-box;
+
+	&:hover {
+		border-color: @accent; 
+	}
+
+	&:focus {
+		box-shadow: 0 0 1px 1px @accent;
+		border-color: @accent; 
+	}
+}
+
+input[name='email'].success-email-text {
+	border: 1px solid #aaec7e;
+	box-shadow: 0 0 1px 1px #aaec7e;
+}
+
+input[name='send-btn'].success-email-button {
+	background-color: #aaec7e;
+	box-shadow: 0 0 1px 1px #aaec7e;
+}
+
+input[name='email'].error-email-text {
+	border: 1px solid #ed7e7e;
+	box-shadow: 0 0 1px 1px #ed7e7e;
+}
+
+input[name='send-btn'].error-email-button {
+	background-color: #ed7e7e;
+	box-shadow: 0 0 1px 1px #ed7e7e;
+}
+
+input[name='send-btn'] {
+	width: 97px;
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: 500;
+	letter-spacing: 2.25px;
+	color: #fff;
+	background-color: @accent;
+	border: none;
+	margin-left: 5px;
+	cursor: pointer;
+	text-align: center;
+
+	&:hover {
+		transform: translateY(-2px);
 	}
 }
 

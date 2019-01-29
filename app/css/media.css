@@ -76,6 +76,10 @@
     width: 80%;
   }
 
+  .menu p {
+    font-size: 16px;
+  }
+
   .service-card {
     margin-bottom: 30px;
   }
@@ -120,11 +124,7 @@
   }
 
   .menu ul {
-    margin: 5% 0;
-  }
-
-  .menu ul a {
-    padding: 3% 0;
+    margin: 7% 0;
   }
 
   .menu-active {
@@ -171,7 +171,7 @@
   .design ul.slick-dots {
     background-color: #fff;
     padding: 0;
-    margin-bottom: 20%;
+    margin-bottom: 12%;
     padding-bottom: 30px;
   }
 
@@ -182,7 +182,7 @@
   .design-composition {
     background-color: #fff;
     padding: 30px;
-    margin-top: 6%;
+    margin-top: 4%;
     opacity: 0.9;
   }
 
@@ -226,6 +226,10 @@
 @media (max-width: 576px) {
   .wrapper {
     width: 95%;
+  }
+
+  .menu ul {
+    margin: 8% auto;
   }
 
   .header {
@@ -283,6 +287,14 @@
 @media (max-width: 340px) {
   .menu p {
     font-size: 20px;
+  }
+
+  .menu ul {
+    margin: 10% auto;
+  }
+
+  .menu ul li a {
+    padding: 2% 0;
   }
 
   .header-composition .h1 {
